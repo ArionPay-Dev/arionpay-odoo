@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="payment_provider_arionpay" model="payment.provider">
+        <field name="name">ArionPay (crypto)</field>
+        <field name="code">arionpay</field>
+        <field name="sequence">40</field>
+        <field name="image_128" type="base64" file="payment_arionpay/static/description/icon.png"/>
+        <field name="module_id" ref="base.module_payment_arionpay"/>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+        <field name="allow_tokenization">False</field>
+    </record>
+</odoo>

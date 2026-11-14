@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_form" model="ir.ui.view">
+        <field name="name">ArionPay Provider Form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <group name="provider_credentials" position="inside">
+                <field name="arionpay_api_key" string="API Key" invisible="code != 'arionpay'" required="code == 'arionpay' and is_published" placeholder="pk_..."/>
+                <field name="arionpay_api_secret" string="API Secret" invisible="code != 'arionpay'" required="code == 'arionpay' and is_published" widget="password" placeholder="sk_..."/>
+                <field name="arionpay_webhook_secret" string="Webhook Signing Secret" invisible="code != 'arionpay'" required="code == 'arionpay' and is_published" widget="password" placeholder="whsec_..."/>
+                <field name="arionpay_base_url" string="ArionPay Address" invisible="code != 'arionpay'" placeholder="https://merchant.arionpay.com"/>
+            </group>
+        </field>
+    </record>
+</odoo>

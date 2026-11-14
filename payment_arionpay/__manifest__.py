@@ -1,0 +1,22 @@
+{
+    "name": "Payment Provider: ArionPay (crypto)",
+    "category": "Accounting/Payment Providers",
+    "sequence": 360,
+    "version": "20.0.1.0.0",
+    "summary": "Crypto payments (Bitcoin, USDT, Litecoin, Ethereum, TRON and more) paid straight to your own wallet.",
+    "description": " ",
+    "author": "ArionPay",
+    "website": "https://arionpay.com",
+    "depends": ["payment"],
+    "data": [
+        "views/payment_arionpay_templates.xml",
+        "views/payment_provider_views.xml",
+        "data/payment_provider_data.xml",
+        "data/payment_method_data.xml",
+    ],
+    "images": ["static/description/icon.png"],
+    "post_init_hook": "post_init_hook",
+    "uninstall_hook": "uninstall_hook",
+    "license": "LGPL-3",
+    "installable": True,
+}

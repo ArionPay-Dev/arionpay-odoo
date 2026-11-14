@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="payment_method_arionpay" model="payment.method">
+        <field name="name">Crypto (Bitcoin, USDT and more)</field>
+        <field name="code">arionpay</field>
+        <field name="sequence">10</field>
+        <field name="provider_id" ref="payment_provider_arionpay"/>
+        <field name="image" type="base64" file="payment_arionpay/static/description/icon.png"/>
+        <field name="support_tokenization">False</field>
+    </record>
+</odoo>
